@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+    <input type="number" placeholder="enter your first number" id="num1">
+    <input type="number" placeholder="enter your second number" id="num2">
+    <button onclick="sub()">Substraction</button>
+     <button onclick=" add()">Addition</button>
+     <button onclick=" multi()">Multiplication</button>
+     <button onclick=" divi()">dividision</button>
+     <button onclick=" power()">calculate power</button>
+    
+    <h4 id="result" style="font-size: 50px;"></h4>
+    <script>
+        // for users
+    // alert("Welcome to introduction to javascript")
+
+    // best friend of web developer
+    // console.log("Welcome to introduction to javascript")
+
+
+    // prompt("What is your first  name?")
+
+    // console.log("true")
+
+    //   var age = "46.5"
+    // var ageConvert = Number(age)
+
+    // console.log(ageConvert)
+
+
+      // var firstName = prompt("What is your first name?") 
+      // var lastName = prompt("What is your last name?") 
+      // var fullName = firstName + " " + lastName
+      // var num_1 = Number(prompt("Enter your first number"))
+      // var num_2 = Number(prompt("Enter your second number"))
+      // var multiplication = parseFloat(num_1 * num_2)
+      // var message = "Hello "+fullName+" your multiplication is "+multiplication
+      // alert(message)
+            
+        
+
+    // function sub(){
+    //     // instructions
+    //    var firstNum = Number(prompt("Enter your first number"))
+    //    var secondNum = Number(prompt("Enter your second number"))
+    //     var subtraction = firstNum - secondNum
+    //     alert("Your subtraction is "+subtraction)
+    // }
+
+
+    // DOM Document object Module
+
+    function sub(){
+    var num_1 = Number(document.getElementById("num1").value)
+    var num_2 = Number(document.getElementById("num2").value)
+    var subtract = num_1 - num_2
+
+    document.getElementById("result").innerText = subtract
+    }
+
+    function add () {
+     var num_1 = Number(document.getElementById("num1").value)
+     var num_2 = Number(document.getElementById("num2").value)
+     var addition = num_1 + num_2
+
+     document.getElementById("result").innerText = addition
+    }
+
+
+    function multi (){
+        var number_1 = Number(document.getElementById("num1").value)
+        var number_2 = Number(document.getElementById("num2").value)
+        var multiplication = number_1 * number_2
+
+        document.getElementById("result").innerText = multiplication
+    }
+
+    function divi (){
+        var number_1 = Number(document.getElementById("num1").value)
+        var number_2 = Number(document.getElementById("num2").value)
+        var dividision = number_1 / number_2
+
+        document.getElementById("result").innerText = dividision
+    }
+        
+    
+    function power (){
+        var number_1 = Number(document.getElementById("num1").value)
+        var number_2 = Number(document.getElementById("num2").value)
+        let power = Math.pow(number_1, number_2); 
+        document.getElementById("result").innerHTML = power
+    }
+    </script>
+</body>
+</html>
